@@ -1,0 +1,43 @@
+<%layout("/layouts/boilerplate")%>
+  <div class="row">
+    <div class="col-8 offset-2">
+        <form method="post" action="/listings" novalidate class="needs-validation">
+<div class="mb-3">
+            <label for="place name" class="form-label">Title</label>
+            <input name="listing[hotel_name]" placeholder="Enter place name" class="form-control" required>
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+<div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input name="listing[location]" class="form-control" required>
+        <div class="invalid-feedback">Please enter a location</div>
+</div>
+<div class="row">
+    <div class="mb-3 col-md-4">
+        <label for="foodtype" class="form-label">food_type</label>
+        <input name="listing[food_type]" placeholder="enter veg/non veg"  class="form-control" required>
+        <div class="invalid-feedback">food_type should be valid</div>
+    </div>
+    <div class="mb-3 col-md-8">
+        <label for="expiry" class="form-label">Expiry Date</label>
+        <input name="listing[expiry_date]" placeholder="enter expiry date" type="text" class="form-control" required>
+        <div class="invalid-feedback">Please enter expiry date</div>
+    </div>
+</div>
+
+<div class="mb-3">
+    <label for="image" class="form-label">image</label>
+    <input name="listing[image_url]" class="form-control"placeholder="enter image url">
+</div>
+
+<!-- <div class="mb-3">
+    <label for="image" class="form-label">image</label>
+    <input name="listing[image_url]" class="form-control"placeholder="enter image url">
+</div> -->
+<br>
+    <button class="btn btn-dark add-btn">Add</button>
+    </form>
+</div>
+</div>
+
+

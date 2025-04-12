@@ -1,0 +1,20 @@
+<% layout("/layouts/boilerplate") %>
+  <div class="container mt-4">
+    <h1 class="mb-4">All Donations</h1>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-3">
+      <% for (let listing of allListings) { %>
+        <div class="col-md-4 mb-4">
+          <a href="/listings/<%= listing._id %>" class="text-decoration-none text-dark">
+            <div class="card h-100">
+              <img src="<%= listing.image_url %>" class="card-img-top show-img" alt="Listing Image">
+              <div class="card-body">
+                <h5 class="card-title"><%= listing.hotel_name %></h5>
+                <p class="card-text">Expires on: <%= new Date(listing.expiry_date).toDateString() %></p>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% } %>
+    </div>
+  </div>
+
